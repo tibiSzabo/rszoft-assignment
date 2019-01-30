@@ -4,10 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarListComponent } from './car-list/car-list.component';
+import { CarFormComponent } from './car-form/car-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarListComponent,
+    CarFormComponent
   ],
   imports: [
     BrowserModule,

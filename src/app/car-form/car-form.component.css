@@ -22,4 +22,10 @@ button {
   background-color: #a57319;
 }
 
+@media (max-width: 1024px) {
 
+.car-form {
+  margin: 5rem 0.3rem 3rem 0.3rem;
+}
+
+}

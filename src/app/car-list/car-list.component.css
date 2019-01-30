@@ -5,3 +5,11 @@
   padding: 2.5rem;
   background: white;
 }
+
+@media (max-width: 1024px) {
+
+  .car-list {
+    margin: 5rem 0.3rem 3rem 0.3rem;
+  }
+
+}

@@ -1,8 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 .section-title {
   align-self: center;
   font-size: 2rem;
   font-family: 'Open Sans Condensed', sans-serif;
+}
+
+body {
+  background: #f5deb36e;
 }

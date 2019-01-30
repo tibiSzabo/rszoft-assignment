@@ -16,7 +16,7 @@ export class CarListComponent implements OnInit, OnDestroy {
   cars: Car[];
   columnsToDisplay = ['manufacturer', 'type', 'prodDate', 'color'];
   carsChangedSubscription: Subscription;
-  dataSource: MatTableDataSource;
+  dataSource: MatTableDataSource<Car>;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private carService: CarService) {

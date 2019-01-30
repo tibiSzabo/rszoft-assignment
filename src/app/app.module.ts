@@ -6,7 +6,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarListComponent } from './car-list/car-list.component';
 import { CarFormComponent } from './car-form/car-form.component';
-import { MatButtonModule, MatDividerModule, MatFormField, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
+import {
+  MatButtonModule,
+  MatDatepickerModule,
+  MatDividerModule,
+  MatFormField,
+  MatFormFieldModule,
+  MatInputModule, MatNativeDateModule,
+  MatTableModule
+} from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -24,7 +32,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatDividerModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

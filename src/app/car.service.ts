@@ -9,6 +9,12 @@ export class CarService {
   cars: Car[] = [
     new Car('Ford', 'Focus', new Date(), 'Red'),
     new Car('Opel', 'Corsa', new Date(), 'White'),
+    new Car('Opel', 'Corsa', new Date(), 'White'),
+    new Car('Opel', 'Corsa', new Date(), 'White'),
+    new Car('Opel', 'Corsa', new Date(), 'White'),
+    new Car('Opel', 'Corsa', new Date(), 'White'),
+    new Car('Opel', 'Corsa', new Date(), 'White'),
+    new Car('Opel', 'Corsa', new Date(), 'White'),
     new Car('Suzuki', 'Swift', new Date())
   ];
   carsChanged = new Subject<Car[]>();

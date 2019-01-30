@@ -10,9 +10,11 @@ import {
   MatButtonModule,
   MatDatepickerModule,
   MatDividerModule,
-  MatFormField,
   MatFormFieldModule,
-  MatInputModule, MatNativeDateModule,
+  MatInputModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatSnackBarModule,
   MatTableModule
 } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -34,10 +36,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSnackBarModule,
+    MatPaginatorModule,
     ReactiveFormsModule
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -1,5 +1,5 @@
 <div class="car-form">
-
+  <h1 class="mat-headline">Add a new car</h1>
   <form [formGroup]="carForm">
 
     <div class="form-field">
@@ -19,20 +19,21 @@
 
     <div class="form-field">
       <mat-form-field>
-        <input matInput [matDatepicker]="datePicker" placeholder="Production Date" formControlName="date">
-        <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
-        <mat-datepicker #datePicker></mat-datepicker>
+        <input matInput placeholder="Color" formControlName="color">
+        <mat-hint>Optional</mat-hint>
       </mat-form-field>
     </div>
 
     <div class="form-field">
       <mat-form-field>
-        <input matInput placeholder="Color" formControlName="color">
+        <input matInput [matDatepicker]="datePicker" placeholder="Production Date" formControlName="date">
+        <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+        <mat-datepicker #datePicker></mat-datepicker>
+        <mat-hint>d/m/yyy</mat-hint>
       </mat-form-field>
     </div>
-
   </form>
 
-  <button mat-raised-button color="primary" (click)="onSaveForm()">Save</button>
+  <button mat-raised-button color="primary" (click)="onSaveForm()" [disabled]="!carForm.valid">Save</button>
 
 </div>

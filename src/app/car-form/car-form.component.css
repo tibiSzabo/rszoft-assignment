@@ -7,16 +7,14 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.car-form button {
-  max-width: 5rem;
+  padding: 2.5rem;
+  margin: 2rem 5rem;
 }
 
 .form-field {
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 

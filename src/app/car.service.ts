@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Car } from './car.model';
 import { Subject } from 'rxjs';
+
+import { Car } from './car.model';
 
 @Injectable({
   providedIn: 'root'
@@ -8,12 +9,6 @@ import { Subject } from 'rxjs';
 export class CarService {
   cars: Car[] = [
     new Car('Ford', 'Focus', new Date(), 'Red'),
-    new Car('Opel', 'Corsa', new Date(), 'White'),
-    new Car('Opel', 'Corsa', new Date(), 'White'),
-    new Car('Opel', 'Corsa', new Date(), 'White'),
-    new Car('Opel', 'Corsa', new Date(), 'White'),
-    new Car('Opel', 'Corsa', new Date(), 'White'),
-    new Car('Opel', 'Corsa', new Date(), 'White'),
     new Car('Opel', 'Corsa', new Date(), 'White'),
     new Car('Suzuki', 'Swift', new Date())
   ];

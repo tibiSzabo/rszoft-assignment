@@ -1,14 +1,16 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { MatPaginator, MatTableDataSource } from '@angular/material';
 
 import { Car } from '../car.model';
 import { CarService } from '../car.service';
-import { Subscription } from 'rxjs';
-import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { listAnimation } from '../animations';
 
 @Component({
   selector: 'app-car-list',
   templateUrl: './car-list.component.html',
-  styleUrls: ['./car-list.component.css']
+  styleUrls: ['./car-list.component.css'],
+  animations: [listAnimation]
 })
 export class CarListComponent implements OnInit, OnDestroy {
   cars: Car[];

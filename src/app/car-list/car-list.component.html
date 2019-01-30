@@ -1,5 +1,6 @@
 <div class="car-list mat-elevation-z10">
-  <table mat-table [dataSource]="dataSource">
+  <div class="section-title">Cars</div>
+  <table mat-table [dataSource]="dataSource" [@listAnimation]="cars.length">
 
     <!--Manufacturer column-->
     <ng-container matColumnDef="manufacturer">

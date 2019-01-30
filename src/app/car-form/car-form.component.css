@@ -1,0 +1,22 @@
+form {
+  width: 60%;
+}
+
+.car-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.car-form button {
+  max-width: 5rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+
+

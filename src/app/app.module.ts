@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarListComponent } from './car-list/car-list.component';
 import { CarFormComponent } from './car-form/car-form.component';
-import { MatButtonModule, MatDividerModule, MatTableModule } from '@angular/material';
+import { MatButtonModule, MatDividerModule, MatFormField, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,9 @@ import { MatButtonModule, MatDividerModule, MatTableModule } from '@angular/mate
     BrowserAnimationsModule,
     MatButtonModule,
     MatTableModule,
-    MatDividerModule
+    MatDividerModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

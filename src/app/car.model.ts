@@ -1,8 +1,6 @@
 export class Car {
 
-  public color: string;
-
-  constructor(public manufacturer: string, public type: string, public prodDate: Date) {
+  constructor(public manufacturer: string, public type: string, public prodDate: Date, public color?: string) {
   }
 
   setColor(color: string) {

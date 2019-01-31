@@ -1,5 +1,6 @@
-<div class="car-list">
-  <table mat-table [dataSource]="cars" class="mat-elevation-z10">
+<div class="car-list mat-elevation-z10">
+  <div class="section-title" style="margin-bottom: 1rem">Cars</div>
+  <table mat-table [dataSource]="dataSource" [@listAnimation]="cars.length">
 
     <!--Manufacturer column-->
     <ng-container matColumnDef="manufacturer">
@@ -29,6 +30,8 @@
     <tr mat-row *matRowDef="let rowData; columns: columnsToDisplay"></tr>
 
   </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
 
 </div>
 

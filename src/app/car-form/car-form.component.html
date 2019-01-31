@@ -1,0 +1,44 @@
+<div class="car-form mat-elevation-z10">
+  <div class="section-title">Add a new car</div>
+  <form [formGroup]="carForm">
+
+    <div class="form-field">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Manufacturer"
+          formControlName="manufacturer">
+      </mat-form-field>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field>
+        <input matInput placeholder="Type" formControlName="type">
+      </mat-form-field>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field>
+        <input matInput placeholder="Color" formControlName="color">
+        <mat-hint>Optional</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field>
+        <input matInput [matDatepicker]="datePicker" placeholder="Production Date" formControlName="date">
+        <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+        <mat-datepicker #datePicker></mat-datepicker>
+        <mat-hint>d/m/yyyy</mat-hint>
+      </mat-form-field>
+    </div>
+  </form>
+
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="onSaveForm()"
+    [disabled]="!carForm.valid"
+    [matTooltip]="carForm.valid ? '' : 'Please fill in all the required fields.'">Save</button>
+
+</div>

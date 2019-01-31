@@ -1,0 +1,31 @@
+form {
+  width: 60%;
+}
+
+.car-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  margin: 7rem 5rem 2rem 5rem;
+  background: white;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
+
+button {
+  background-color: #a57319;
+}
+
+@media (max-width: 1024px) {
+
+.car-form {
+  margin: 5rem 0.3rem 3rem 0.3rem;
+}
+
+}

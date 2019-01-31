@@ -1,5 +1,15 @@
 .car-list {
   display: flex;
   flex-direction: column;
-  margin: 2rem 1rem;
+  margin: 2rem 5rem;
+  padding: 2.5rem;
+  background: white;
+}
+
+@media (max-width: 1024px) {
+
+  .car-list {
+    margin: 5rem 0.3rem 3rem 0.3rem;
+  }
+
 }

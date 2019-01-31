@@ -46,6 +46,6 @@ export class CarFormComponent implements OnInit, OnDestroy {
       this.carForm.value.color ? this.carForm.value.color : null
     ));
     this.carForm.reset();
-    this.snackBar.open('Car saved successfully!', '', {duration: 2000, verticalPosition: 'top'});
+    this.snackBar.open('Car saved successfully!', '', {duration: 90000, verticalPosition: 'bottom'});
   }
 }

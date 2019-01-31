@@ -7,8 +7,15 @@
         <input
           matInput
           placeholder="Manufacturer"
-          formControlName="manufacturer">
+          formControlName="manufacturer"
+          [matAutocomplete]="auto">
       </mat-form-field>
+
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let manufacturer of manufacturers" [value]="manufacturer">
+          {{ manufacturer }}
+        </mat-option>
+      </mat-autocomplete>
     </div>
 
     <div class="form-field">

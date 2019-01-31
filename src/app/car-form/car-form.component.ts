@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 
 import { CarService } from '../car.service';
 import { Car } from '../car.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-car-form',
   templateUrl: './car-form.component.html',
   styleUrls: ['./car-form.component.css']
 })
-export class CarFormComponent implements OnInit {
+export class CarFormComponent implements OnInit, OnDestroy {
   carForm: FormGroup;
+  manufacturers: string[];
+  carsChangedSubscription: Subscription;
 
   constructor(private formBuilder: FormBuilder,
               private carService: CarService,
@@ -25,6 +28,14 @@ export class CarFormComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.manufacturers = this.carService.getManufacturers();
+    this.carsChangedSubscription = this.carService.carsChanged.subscribe(() => {
+      this.manufacturers = this.carService.getManufacturers();
+    });
+  }
+
+  ngOnDestroy() {
+    this.carsChangedSubscription.unsubscribe();
   }
 
   onSaveForm() {
@@ -34,6 +45,7 @@ export class CarFormComponent implements OnInit {
       this.carForm.value.date.valueOf(),
       this.carForm.value.color ? this.carForm.value.color : null
     ));
+    this.carForm.reset();
     this.snackBar.open('Car saved successfully!', '', {duration: 2000, verticalPosition: 'top'});
   }
 }

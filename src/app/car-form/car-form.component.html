@@ -41,11 +41,14 @@
     </div>
   </form>
 
-  <button
-    mat-raised-button
-    color="primary"
-    (click)="onSaveForm()"
-    [disabled]="!carForm.valid"
-    [matTooltip]="carForm.valid ? '' : 'Please fill in all the required fields.'">Save</button>
+  <div class="button-wrapper"
+       [matTooltip]="carForm.valid ? '' : 'Please fill in all the required fields.'"
+       [matTooltipPosition]="'above'">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onSaveForm()"
+      [disabled]="!carForm.valid">Save</button>
+  </div>
 
 </div>

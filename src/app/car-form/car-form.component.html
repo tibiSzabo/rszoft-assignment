@@ -13,7 +13,7 @@
 
       <mat-autocomplete #auto="matAutocomplete">
         <mat-option *ngFor="let manufacturer of manufacturers" [value]="manufacturer">
-          {{ manufacturer }}
+          {{ manufacturer | titlecase }}
         </mat-option>
       </mat-autocomplete>
     </div>

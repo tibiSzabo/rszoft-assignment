@@ -24,14 +24,17 @@ export class CarListComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.cars = this.carService.getCars();
-    this.dataSource = new MatTableDataSource<Car>(this.cars);
-    this.dataSource.paginator = this.paginator;
+    this.initData();
 
     this.carsChangedSubscription = this.carService.carsChanged.subscribe((cars) => {
       this.cars = cars;
-      this.dataSource = new MatTableDataSource<Car>(this.cars);
-      this.dataSource.paginator = this.paginator;
+      this.initData();
     });
+  }
+
+  private initData() {
+    this.dataSource = new MatTableDataSource<Car>(this.cars);
+    this.dataSource.paginator = this.paginator;
   }
 
   ngOnDestroy() {

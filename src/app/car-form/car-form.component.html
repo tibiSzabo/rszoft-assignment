@@ -7,8 +7,15 @@
         <input
           matInput
           placeholder="Manufacturer"
-          formControlName="manufacturer">
+          formControlName="manufacturer"
+          [matAutocomplete]="auto">
       </mat-form-field>
+
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let manufacturer of manufacturers" [value]="manufacturer">
+          {{ manufacturer }}
+        </mat-option>
+      </mat-autocomplete>
     </div>
 
     <div class="form-field">
@@ -34,11 +41,14 @@
     </div>
   </form>
 
-  <button
-    mat-raised-button
-    color="primary"
-    (click)="onSaveForm()"
-    [disabled]="!carForm.valid"
-    [matTooltip]="carForm.valid ? '' : 'Please fill in all the required fields.'">Save</button>
+  <div class="button-wrapper"
+       [matTooltip]="carForm.valid ? '' : 'Please fill in all the required fields.'"
+       [matTooltipPosition]="'above'">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onSaveForm()"
+      [disabled]="!carForm.valid">Save</button>
+  </div>
 
 </div>

@@ -5,25 +5,25 @@
     <!--Manufacturer column-->
     <ng-container matColumnDef="manufacturer">
       <th mat-header-cell *matHeaderCellDef> Manufacturer </th>
-      <td mat-cell *matCellDef="let car"> {{car.manufacturer}} </td>
+      <td mat-cell *matCellDef="let car"> {{ car.manufacturer | titlecase }} </td>
     </ng-container>
 
     <!--Type column-->
     <ng-container matColumnDef="type">
       <th mat-header-cell *matHeaderCellDef> Type </th>
-      <td mat-cell *matCellDef="let car"> {{car.type}} </td>
+      <td mat-cell *matCellDef="let car"> {{ car.type | titlecase }} </td>
     </ng-container>
 
     <!--Date column-->
     <ng-container matColumnDef="prodDate">
       <th mat-header-cell *matHeaderCellDef> Production Date </th>
-      <td mat-cell *matCellDef="let car"> {{car.prodDate | date: 'yyyy.MM.dd' }} </td>
+      <td mat-cell *matCellDef="let car"> {{ car.prodDate | date: 'yyyy.MM.dd' }} </td>
     </ng-container>
 
     <!--Color column-->
     <ng-container matColumnDef="color">
       <th mat-header-cell *matHeaderCellDef> Color </th>
-      <td mat-cell *matCellDef="let car"> {{car.color ? car.color : '-'}} </td>
+      <td mat-cell *matCellDef="let car"> {{ (car.color ? car.color : '-') | titlecase }} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
